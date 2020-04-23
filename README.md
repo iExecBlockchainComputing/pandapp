@@ -1,4 +1,5 @@
-We started to work from
+We started from
+
 https://github.com/abeusher/geohash2kml.git
 https://github.com/ashwin711/proximityhash.git
 
@@ -11,7 +12,7 @@ python3 ../proximityhash/backend.py output ; python3 geohash2kml.py output outpu
 
 # Précision geohash
 
-####   km      
+lvl km      
 1   ± 2500
 2   ± 630
 3   ± 78
@@ -23,3 +24,4 @@ python3 ../proximityhash/backend.py output ; python3 geohash2kml.py output outpu
 9   ± 0.0024
 10  ± 0.00060
 11  ± 0.000074
+
