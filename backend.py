@@ -183,15 +183,17 @@ if __name__ == '__main__':
     clo=float(45.724947)
     cla=float(4.874956)
     level=9
-    a=Individu(0, 1, 0, create_circle_geohash(clo,cla, float(30), level, False, 1, 12))
+    a=Individu(0, 1, 0, create_circle_geohash(clo,cla, float(50), level, False, 1, 12))
     b=Individu(1, 1, 0, create_circle_geohash(clo,cla, float(20), level, False, 1, 12))
     c=Individu(2, 1, 0, create_circle_geohash(clo,cla, float(10), level, False, 1, 12))
     d=Individu(3, 1, 0, create_circle_geohash(clo,cla, float(5), level, False, 1, 12))
 
     lists.append(a)
     lists.append(b)
+    lists.appenf(b)
     lists.append(c)
     lists.append(c)
+    lists.append(c)             
     lists.append(d)
     lists.append(d)
     lists.append(d)

@@ -103,4 +103,4 @@ if __name__ == "__main__":
     kml = KmlMaker(input_file)
     kml.loadLocations()
     kml.simple_kml_output()
-    kml.advanced_kml_output(output_filename=output_file, color_ramp=[0,5,8], polygon_height=5000)
+    kml.advanced_kml_output(output_filename=output_file, color_ramp=[2,5,7], polygon_height=5000)

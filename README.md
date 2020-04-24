@@ -12,16 +12,17 @@ python3 ../proximityhash/backend.py output ; python3 geohash2kml.py output outpu
 
 # Précision geohash
 
-lvl km      
-1   ± 2500
-2   ± 630
-3   ± 78
-4   ± 20
-5   ± 2.4
-6   ± 0.61
-7   ± 0.076
-8   ± 0.019
-9   ± 0.0024
-10  ± 0.00060
-11  ± 0.000074
 
+Geohash length	Cell width	Cell height
+1	≤ 5,000km	×	5,000km
+2	≤ 1,250km	×	625km
+3	≤ 156km	×	156km
+4	≤ 39.1km	×	19.5km
+5	≤ 4.89km	×	4.89km
+6	≤ 1.22km	×	0.61km
+7	≤ 153m	×	153m
+8	≤ 38.2m	×	19.1m
+9	≤ 4.77m	×	4.77m
+10	≤ 1.19m	×	0.596m
+11	≤ 149mm	×	149mm
+12	≤ 37.2mm	×	18.6mm
