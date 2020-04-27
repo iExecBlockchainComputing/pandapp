@@ -1,9 +1,9 @@
 import Geohash
 import georaptor
 import math
-import time
 import argparse
 import csv
+import sys
 from clint.textui import puts, indent, colored
 
 
@@ -162,58 +162,74 @@ def main():
     puts(colored.green('\nTotal execution time: ' + str(et) + ' seconds\n'))
 
 class Individu():
-    def __init__(self, _id, _status, _timestamp, _geohashes):
-        self.id = _id
+    def __init__(self, _status, _timestamp, _geohashes):
         self.status = _status
         self.timestamp = _timestamp
         self.geohashes = _geohashes
 
     def __str__(self):
-        return "[id %s | status %s | timestamp %s] %s" % (self.id, self.status, self.timestamp, self.geohashes)
-
+        return "[status %s | timestamp %s] %s" % (self.status, self.timestamp, self.geohashes)
 
 
 if __name__ == '__main__':
-    start_time = time.time()
+
+    if len(sys.argv) != 3:
+        print ("Usage: python backend.py <output file>")
+        sys.exit(-1)
+
+    output_file = sys.argv[1]
+    scenario = sys.argv[2]
+
     georaptor_flag = False
     minlevel = 1
     maxlevel = 12
     lists=[]
 #   Create path
-    clo=float(45.724947)
-    cla=float(4.874956)
-    level=9
-    a=Individu(0, 1, 0, create_circle_geohash(clo,cla, float(50), level, False, 1, 12))
-    b=Individu(1, 1, 0, create_circle_geohash(clo,cla, float(20), level, False, 1, 12))
-    c=Individu(2, 1, 0, create_circle_geohash(clo,cla, float(10), level, False, 1, 12))
-    d=Individu(3, 1, 0, create_circle_geohash(clo,cla, float(5), level, False, 1, 12))
+    if scenario == "0":
+        clo=float(45.724947)
+        cla=float(4.874956)
+        level=9
+        a=Individu(1, 0, create_circle_geohash(clo,cla, float(1), level, False, 1, 12))
+        print(a)
+        lists.append(a)
 
-    lists.append(a)
-    lists.append(b)
-    lists.appenf(b)
-    lists.append(c)
-    lists.append(c)
-    lists.append(c)             
-    lists.append(d)
-    lists.append(d)
-    lists.append(d)
-    lists.append(d)
+    elif scenario == "1":
+
+        clo=float(45.724947)
+        cla=float(4.874956)
+        level=9
+        a=Individu(1, 0, create_circle_geohash(clo,cla, float(50), level, False, 1, 12))
+        b=Individu(1, 0, create_circle_geohash(clo,cla, float(20), level, False, 1, 12))
+        c=Individu(1, 0, create_circle_geohash(clo,cla, float(10), level, False, 1, 12))
+        d=Individu(1, 0, create_circle_geohash(clo,cla, float(5), level, False, 1, 12))
+
+        lists.append(a)
+        lists.append(b)
+        lists.append(b)
+        lists.append(c)
+        lists.append(c)
+        lists.append(c)
+        lists.append(d)
+        lists.append(d)
+        lists.append(d)
+        lists.append(d)
+    else:
+       print ("error; no scneario found")
+       exit(0)
 
 # generate heat map
     heatmap={}
     for i in lists:
         if (i.status == 1):
-            print(i)
             for j in i.geohashes:
                 # better with get method?
                 try:
                     heatmap[j] += 1
                 except KeyError:
                     heatmap[j] = 1
-    print(type(heatmap))
 
 #    pickle.dump( heatmap, open( "output", "wb" ) )
 #   Csv file
-    w = csv.writer(open("output", "w"),delimiter= '\t')
+    w = csv.writer(open(output_file, "w"),delimiter= '\t')
     for key, val in heatmap.items():
         w.writerow([key, val])

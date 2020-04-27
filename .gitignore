@@ -1,0 +1,5 @@
+heatmap.kml
+tracks
+.idea/
+__pycache__/
+*.kml
