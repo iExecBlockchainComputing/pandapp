@@ -1,11 +1,11 @@
-# User centric data sharing service to fight pandemic spread 
+# PANDAPP; PRIVACY PRESERVING DATA CONTRIBUTION 
 
-We build a voluntary service to allow individuals to share their status and contact traces,
-Individuals will allow the processing of the data under their control, their datas will be shared 
-to white listed applications running in SGX enclaves, where data cant be leaked and the processing cannot be tampered.
+A voluntary service to allow individuals to share their data to fight the pandemic spread.
+Individual keeps the control of its data and its usage by third party. 
+The solution leverages blockchain, data encryption and Trusted Execution Environments.
+ 
 
-
-## usefful link
+## useful links
 * Geohash map
 ```http://geohash.gofreerange.com/```
 *iExec infrastructure
@@ -24,8 +24,6 @@ to white listed applications running in SGX enclaves, where data cant be leaked 
    * output : heatmap in kml file    
 
 ```python3 geohash2kml.py tracks heatmap```
-
-
 
 ## Précision geohash
 
