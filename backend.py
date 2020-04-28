@@ -1,10 +1,10 @@
 import Geohash
-import georaptor
+#import georaptor
 import math
 import argparse
 import csv
-import sys
-from clint.textui import puts, indent, colored
+import sysgit sta
+#from clint.textui import puts, indent, colored
 
 
 def in_circle_check(latitude, longitude, centre_lat, centre_lon, radius):

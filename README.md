@@ -1,29 +1,31 @@
-# Objective:
+# User centric data sharing service to fight pandemic spread 
 
+We build a voluntary service to allow individuals to share their status and contact traces,
+Individuals will allow the processing of the data under their control, their datas will be shared 
+to white listed applications running in SGX enclaves, where data cant be leaked and the processing cannot be tampered.
 
-
-We started from
-
-* https://github.com/abeusher/geohash2kml.git
-* https://github.com/ashwin711/proximityhash.git
 
 ## usefful link
 * Geohash map
 ```http://geohash.gofreerange.com/```
-
+*iExec infrastructure
+```docs.iex.ec```
 
 ## Command to execute the script
 
-
-python3 backend.py tracks ; python3 geohash2kml.py tracks heatmap
-
 * Backend.py create generate geohash samples and creates dataset
+   * output : geohash dict in a file
 
-   * output : geohash dict
+```python3 backend.py tracks```
+
+
 * Geohask2kml creates kml file from dataset.
-
-   * input : geohash dict
+   * input : geohash dict file
    * output : heatmap in kml file    
+
+```python3 geohash2kml.py tracks heatmap```
+
+
 
 ## Précision geohash
 
