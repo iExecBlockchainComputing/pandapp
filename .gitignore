@@ -3,3 +3,8 @@ tracks
 .idea/
 __pycache__/
 *.kml
+backend_covid.iml
+heatmap.csv
+socialdistance.data
+tracks_heatmap.data
+tracks_socialdistance.data

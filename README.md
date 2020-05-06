@@ -1,31 +1,69 @@
-# PANDAPP; PRIVACY PRESERVING DATA CONTRIBUTION 
+# PANDAPP: PRIVACY PRESERVING DATA CONTRIBUTION 
 
 A voluntary service to allow individuals to share their data to fight the pandemic spread.
 Individual keeps the control of its data and its usage by third party. 
 The solution leverages blockchain, data encryption and Trusted Execution Environments.
  
+## The problem 
+TDB
 
-## useful links
-* Geohash map
-```http://geohash.gofreerange.com/```
-*iExec infrastructure
-```docs.iex.ec```
 
-## Command to execute the script
+#How it works   
+TDB
 
-* Backend.py create generate geohash samples and creates dataset
-   * output : geohash dict in a file
+ 
+# Dataset generation
+TDB
 
-```python3 backend.py tracks```
+# Applications
 
+## Heatmap
+
+The application generates an heatmap data collected from volunteers, 
+```python3 app_heatmap.py
+Filename for dataset is tracks_heatmap.data
+output file is output_heatmap.csv
+Total execution time: 0.0004177093505859375 seconds
+```
+then create the kml files  in a second program 
 
 * Geohask2kml creates kml file from dataset.
    * input : geohash dict file
    * output : heatmap in kml file    
 
-```python3 geohash2kml.py tracks heatmap```
+```python3 geohash2kml.py output_heatmap.csv heatmap
+....
+generate heatmap_simple.kml
+generate heatmap.kml
+```
+You can charge the kml file generated in "Google my maps" 
+![test](images/simple_maps.png "test")
+The green line means someone was moving during the time interval 
+The red point means someone was standing at the same place during the time interval 
 
-## Précision geohash
+### Limitation
+TBD
+
+## Social distance
+
+```python3 app_socialdistance.py 1
+Filename for dataset is tracks_socialdistance.data
+....
+*************RESULT***************
+ you have met  1  person(s) declared ill
+ and  0  person(s) not declared
+Total execution time: 0.0002472400665283203 seconds
+```
+
+# Links and reference 
+
+* Geohash map
+```http://geohash.gofreerange.com/```
+
+* iExec infrastructure
+```docs.iex.ec```
+
+* Précision geohash
 
 
 | len  | Geohash length  | Cell width heigh  |

@@ -69,6 +69,7 @@ class KmlMaker(object):
             t = t.replace("__coordinates__",poly)
             f.write(t+"\n")
         f.write(footer)
+        print("generate " + output_filename)
 
     def advanced_kml_output(self,title='Location Indicators',output_filename ='output_advanced.kml',color_ramp=[1,500,1000],polygon_height=1000):
         f = open(output_filename,"w")
@@ -92,6 +93,7 @@ class KmlMaker(object):
             t = t.replace('__title__',title)
             f.write(t+"\n")
         f.write(footer)
+        print("generate " + output_filename)
 
 if __name__ == "__main__":
     if len(sys.argv) != 3:
@@ -102,5 +104,5 @@ if __name__ == "__main__":
     output_file = sys.argv[2]
     kml = KmlMaker(input_file)
     kml.loadLocations()
-    kml.simple_kml_output(output_filename=output_file + g"_simple.kml")
-    kml.advanced_kml_output(output_filename=output_file + ".kml", color_ramp=[2,5,7], polygon_height=5000)
+    kml.simple_kml_output(output_filename=output_file + "_simple.kml")
+    kml.advanced_kml_output(output_filename=output_file + ".kml", color_ramp=[2,5,8], polygon_height=5000)

@@ -1,3 +1,4 @@
+#DEPRECATED
 import Geohash
 #import georaptor
 import math
@@ -173,7 +174,7 @@ class Individu():
 if __name__ == '__main__':
 
     if len(sys.argv) != 3:
-        print ("Usage: python backend.py <output file> scenario")
+        print ("Usage: python Individu.py <output file> scenario")
         sys.exit(-1)
 
     output_file = sys.argv[1]
