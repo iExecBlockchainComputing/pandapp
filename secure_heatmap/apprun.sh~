@@ -1,9 +1,0 @@
-iexec app run 0xD5CE1a107f40b5544425544B37d91299716eED37
-    --chain goerli                    \
-    --params "python3 /app/app_heatmap.py" \
-    --tag tee                         \
-    --dataset 0x103E387a76E1a5dCb26200432636615B25B46F70 \
-    --beneficiary 0x0000000000000000000000000000000000000000 \
-    --wallet-file user_wallet \
-    --watch \
-    --force 

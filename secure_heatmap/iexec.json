@@ -17,8 +17,7 @@
         "params": "",
         "tag": "0x0000000000000000000000000000000000000000000000000000000000000000",
         "trust": "0",
-        "callback": "0x0000000000000000000000000000000000000000"
-      }
+        "callback": "0x0000000000000000000000000000000000000000"      }
     }
   ],
   "dataset": {
@@ -35,10 +34,10 @@
   },
   "app": {
     "owner": "0x7800885445a481315Fac90A8e8BDb62a0e538b71",
-    "name": "app_heatmap02",
+    "name": "app_heatmap03",
     "type": "DOCKER",
-    "multiaddr": "registry.hub.docker.com/ericro/app_heatmap:0.2",
-      "checksum": "0xcc090d568fe3a670b5bd683af8c659fb76a3ca13f7ac6b58fde318268a821047",
-    "mrenclave": "c1d17ec07f243c264f46aa04846378113cccf25c92c2dd816a9e78d862f0bdc5|22db3621ac8230479ee947abbfe98b01|16e7c11e75448e31c94d023e40ece7429fb17481bc62f521c8f70da9c48110a1"
+    "multiaddr": "registry.hub.docker.com/ericro/app_heatmap:0.3",
+      "checksum": "0xa1749dbebbc2f9ffa0a3df04aacf9459d9a8650aa012c99576b14b109d959725",
+    "mrenclave": "4198309883f334aaa3c13136a8f7833e89cbaab0e8600c435b69bafd9898a028|0d019287b75963ec0c6c60670be09d1c|16e7c11e75448e31c94d023e40ece7429fb17481bc62f521c8f70da9c48110a1"
   }
 }
