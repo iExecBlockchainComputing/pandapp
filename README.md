@@ -4,18 +4,12 @@ A voluntary service to allow individuals to share their data to fight the pandem
 Individual keeps the control of its data and its usage by third party. 
 The solution leverages blockchain, data encryption and Trusted Execution Environments.
  
-## The problem 
-TDB
-
-
-#How it works   
-TDB
-
  
 # Dataset generation
-TDB
+
 
 # Applications
+
 
 ## Heatmap
 
@@ -41,8 +35,16 @@ You can charge the kml file generated in "Google my maps"
 The green line means someone was moving during the time interval 
 The red point means someone was standing at the same place during the time interval 
 
-### Limitation
-TBD
+### How to build the heatmap applications
+
+We used iExec stack to create the applications
+Go to secure_heatmap directory
+Copy the python source file in app/
+```
+cp ../Individu.py ../app_heatmap.py src/.   
+docker image build --no-cache -t ericro/app_heatmap:0.2 .
+docker image push ericro/app_heatmap:0.2
+```
 
 ## Social distance
 
@@ -55,7 +57,9 @@ Filename for dataset is tracks_socialdistance.data
 Total execution time: 0.0002472400665283203 seconds
 ```
 
-# Links and reference 
+# Links and references 
+
+# useful github about gephash
 
 * Geohash map
 ```http://geohash.gofreerange.com/```

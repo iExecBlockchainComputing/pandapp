@@ -8,3 +8,6 @@ heatmap.csv
 socialdistance.data
 tracks_heatmap.data
 tracks_socialdistance.data
+apprun.sh
+chain.json
+.secrets/

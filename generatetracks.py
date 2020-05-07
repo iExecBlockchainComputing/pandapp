@@ -63,15 +63,6 @@ def map( clo,cla, level, size ):
     return _map
 
 
-class Individu():
-    def __init__(self, _status, _geohashes):
-        self.status = _status        # 0 not declared ill #  1 declared ill
-        self.geohashes = _geohashes  # list of tuples
-
-    def __str__(self):
-        return "[status %s | %s" % (self.status, self.geohashes)
-
-
 if __name__ == '__main__':
 
     clo=float(45.724947)
