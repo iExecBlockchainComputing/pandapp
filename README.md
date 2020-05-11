@@ -4,6 +4,10 @@ A voluntary service to allow individuals to share their data to fight the pandem
 Individual keeps the control of its data and its usage by third party. 
 The solution leverages blockchain, data encryption and Trusted Execution Environments.
 
+# Slides 
+Everything is explained 
+[presentation](https://github.com/iExecBlockchainComputing/pandapp/blob/master/Pandapp_hackathon.pdf)
+
 # Requirements:
 
 * iexec SDK 
@@ -22,7 +26,7 @@ Please follow instruction in the chapter "confidential computing" in docs.iex.ec
 
 # Local development
   
-If you want to develop or improve exiting applications, you can start to work locally  
+If you want to develop or improve existing applications, you can start to work locally  
   
 ## Dataset generation
 
@@ -38,7 +42,8 @@ python3 generatetracks.py
 
 The application generates an heatmap, then create the kml files  in a second program 
 
-```python3 app_heatmap.py 
+```
+   python3 app_heatmap.py 
    Filename for dataset is tracks_heatmap.data
    heatmap in csv format saved in tempfile.csv
    output file is output_heatmap
@@ -47,7 +52,6 @@ The application generates an heatmap, then create the kml files  in a second pro
    generate output_heatmap_simple.kml
    generate output_heatmap.kml
    Total execution time: 0.006757020950317383 seconds
-
 ```
 
 Then you can charge the kml file generated in "Google my maps" 
@@ -60,17 +64,18 @@ Green: low density of person declared deceased.
 
 ### Social distance
 
-```python3 app_socialdistance.py 2
+```
+   python3 app_socialdistance.py 2
    Filename for dataset is tracks_socialdistance.data
    [status 1 | [(0, 'u05kngyj3'), (1, 'u05kngyj3'), (2, 'u05kngyj3'), (3, 'u05kngyj3'), (4, 'u05kngyj3'), (5, 'u05kngyj3'), (6, 'u05kngyj3'), (7, 'u05kngyj3'), (8, 'u05kngyj3'), (9, 'u05kngyj3'), (10, 'u05kngyj3'), (11, 'u05kngyj3'), (12, 'u05kngyj3'), (13, 'u05kngyj3'), (14, 'u05kngyj3'), (15, 'u05kngyj3'), (16, 'u05kngyj3'), (17, 'u05kngyj3'), (18, 'u05kngyj3'), (19, 'u05kngyj3')]
-....
-....
-....
+   ....
+   ....
+   ....
    target  18 u05kngvff
    target  19 u05kngvfd
    *************RESULT***************
-    you have met  3  person(s) declared ill
-    and  0  person(s) not declared
+    you  met  3  person(s) declared deceased
+    and  0  person(s) not declared deceased
    Total execution time: 0.0007197856903076172 seconds
 
 ```
