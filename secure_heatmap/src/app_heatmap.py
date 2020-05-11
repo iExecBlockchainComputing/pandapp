@@ -1,5 +1,4 @@
 import csv
-import sys
 import time
 import os
 import pickle
@@ -38,14 +37,14 @@ if __name__ == '__main__':
                     heatmap[j] = 1
 
     #Save the intermediary file before the post processing function which generates the kml file.
-    w = csv.writer(open(tmpfile, "w"), delimiter= '\t')
+    w = csv.writer(open(tmpfile, "w"), delimiter=',')
     for key, val in heatmap.items():
         w.writerow([key.lower(), val])
 
     kml = KmlMaker(tmpfile)
-    kml.loadLocations()
+    kml.loadLocations(heatmap)
     kml.simple_kml_output(output_filename=output_root + "_simple.kml")
-    kml.advanced_kml_output(output_filename=output_root + ".kml", color_ramp=[2,5,8], polygon_height=5000)
+    kml.advanced_kml_output(output_filename=output_root + ".kml", color_ramp=[2,3,8], polygon_height=5000)
 
     et = time.time() - start_time
     print('Total execution time: ' + str(et) + ' seconds\n')

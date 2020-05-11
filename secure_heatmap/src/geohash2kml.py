@@ -21,11 +21,8 @@ class KmlMaker(object):
         polygon = "%s %s %s %s %s"%(lowerleft,upperleft,upperright,lowerright,lowerleft)
         return polygon
 
-    def loadLocations(self):
-        counts = {}
-        for line in open(self.filename,"rU"):
-            (geohashcode, count) = line.strip().split("\t")
-            self.locations[geohashcode] = count
+    def loadLocations(self, _dict):
+        self.locations = _dict
         print(self.locations)
         print('Done loading geohashcode counts.')
 
