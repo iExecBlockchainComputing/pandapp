@@ -4,9 +4,7 @@ A voluntary service to allow individuals to share their data to fight the pandem
 Individual keeps the control of its data and its usage by third party. 
 The solution leverages blockchain, data encryption and Trusted Execution Environments.
 
-# Slides 
-Everything is explained 
-[presentation](https://github.com/iExecBlockchainComputing/pandapp/blob/master/Pandapp_hackathon.pdf)
+Everything is explained in those [slides](https://github.com/iExecBlockchainComputing/pandapp/blob/master/Pandapp_hackathon.pdf)
 
 # Requirements:
 
