@@ -3,73 +3,96 @@
 A voluntary service to allow individuals to share their data to fight the pandemic spread.
 Individual keeps the control of its data and its usage by third party. 
 The solution leverages blockchain, data encryption and Trusted Execution Environments.
+
+# Requirements:
+
+* iexec SDK 
+* Python 3
+* pip3 install python-geohash Geohash 
+
+# The Apps in Trust Execution Environment
  
- 
-# Dataset generation
+secure_heapmap and secure_socialdistance_calculation directories contain SGX apps source and encrypted datasets.      
 
+Please follow instruction in the chapter "confidential computing" in docs.iex.ec to reproduce. 
 
-# Applications
+ * https://docs.iex.ec/for-developers/quick-start-for-developers
+ * https://docs.iex.ec/for-developers/your-first-app
+ * https://docs.iex.ec/for-developers/confidential-computing
 
+# Local development
+  
+If you want to develop or improve exiting applications, you can start to work locally  
+  
+## Dataset generation
 
-## Heatmap
-
-The application generates an heatmap data collected from volunteers, 
-```python3 app_heatmap.py
-Filename for dataset is tracks_heatmap.data
-output file is output_heatmap.csv
-Total execution time: 0.0004177093505859375 seconds
 ```
-then create the kml files  in a second program 
+python3 generatetracks.py
+...generates tracks for heatmap app : tracks_heatmap.data
+...generates tracks for social distance app : tracks_socialdistance.data
+```
 
-* Geohask2kml creates kml file from dataset.
-   * input : geohash dict file
-   * output : heatmap in kml file    
+## Applications
 
-```python3 geohash2kml.py output_heatmap.csv heatmap
+### Heatmap
+
+The application generates an heatmap, then create the kml files  in a second program 
+
+```python3 app_heatmap.py 
+   Filename for dataset is tracks_heatmap.data
+   heatmap in csv format saved in tempfile.csv
+   output file is output_heatmap
+   {'u05kngyj3': 24, '......, 'u05kngynf': 20, 'u05kngynd': 20}
+   Done loading geohashcode counts.
+   generate output_heatmap_simple.kml
+   generate output_heatmap.kml
+   Total execution time: 0.006757020950317383 seconds
+
+```
+
+Then you can charge the kml file generated in "Google my maps" 
+
+![Heatmap](images/simple_maps.png "heatmap")
+
+Red : hight density of person declared deceased.
+
+Green: low density of person declared deceased.
+
+### Social distance
+
+```python3 app_socialdistance.py 2
+   Filename for dataset is tracks_socialdistance.data
+   [status 1 | [(0, 'u05kngyj3'), (1, 'u05kngyj3'), (2, 'u05kngyj3'), (3, 'u05kngyj3'), (4, 'u05kngyj3'), (5, 'u05kngyj3'), (6, 'u05kngyj3'), (7, 'u05kngyj3'), (8, 'u05kngyj3'), (9, 'u05kngyj3'), (10, 'u05kngyj3'), (11, 'u05kngyj3'), (12, 'u05kngyj3'), (13, 'u05kngyj3'), (14, 'u05kngyj3'), (15, 'u05kngyj3'), (16, 'u05kngyj3'), (17, 'u05kngyj3'), (18, 'u05kngyj3'), (19, 'u05kngyj3')]
 ....
-generate heatmap_simple.kml
-generate heatmap.kml
-```
-You can charge the kml file generated in "Google my maps" 
-![test](images/simple_maps.png "test")
-The green line means someone was moving during the time interval 
-The red point means someone was standing at the same place during the time interval 
-
-### How to build the heatmap applications
-
-We used iExec stack to create the applications
-Go to secure_heatmap directory
-Copy the python source file in app/
-```
-cp ../Individu.py ../app_heatmap.py src/.   
-docker image build --no-cache -t ericro/app_heatmap:0.2 .
-docker image push ericro/app_heatmap:0.2
-```
-
-## Social distance
-
-```python3 app_socialdistance.py 1
-Filename for dataset is tracks_socialdistance.data
 ....
-*************RESULT***************
- you have met  1  person(s) declared ill
- and  0  person(s) not declared
-Total execution time: 0.0002472400665283203 seconds
+....
+   target  18 u05kngvff
+   target  19 u05kngvfd
+   *************RESULT***************
+    you have met  3  person(s) declared ill
+    and  0  person(s) not declared
+   Total execution time: 0.0007197856903076172 seconds
+
 ```
 
 # Links and references 
 
-# useful github about gephash
+* useful github about gephash
+
+    * https://github.com/abeusher/geohash2kml.git
+    * https://github.com/ashwin711/proximityhash.git
+    * https://github.com/kylebebak/py-geohash-any.git 
 
 * Geohash map
+
 ```http://geohash.gofreerange.com/```
 
 * iExec infrastructure
+
 ```docs.iex.ec```
 
-* Précision geohash
-
-
+* Geohash accuracy
+ 
 | len  | Geohash length  | Cell width heigh  |
 |------|-----------------|-------------------|
 | 1    | ≤ 5,000km       | ×5,000km          |
