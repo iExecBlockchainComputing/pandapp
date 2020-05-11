@@ -68,19 +68,19 @@ if __name__ == '__main__':
     clo=float(45.724947)
     cla=float(4.874956)
     level=9
-    sizemap=6
+    sizemap=21
     grid=map(cla, clo, level, sizemap)
 
     dataset_app1=[]
     dataset_app2=[]
 
-    nbstep =6
+    nbstep =20
 
 #   Individu A not moving
 
     _geohashes1 = [0 for x in range(0, nbstep)]
     for x in range(0, nbstep):
-        _geohashes1[x] = (x,grid[3*sizemap + 3])
+        _geohashes1[x] = (x,grid[8*sizemap + 8])
     A=Individu(1, _geohashes1)
     dataset_app1.append(A)
     dataset_app2.append(A)
@@ -88,8 +88,8 @@ if __name__ == '__main__':
 #   Individu B moving
     _geohashes2 = [0 for x in range(0, nbstep)]
     for x in range(0, nbstep):
-        _geohashes2[x] = (x,grid[3*sizemap + x])
-    B=Individu(0, _geohashes2)
+        _geohashes2[x] = (x,grid[8*sizemap + x])
+    B=Individu(1, _geohashes2)
     dataset_app1.append(B)
     dataset_app2.append(B)
 
@@ -101,6 +101,59 @@ if __name__ == '__main__':
     C=Individu(1, _geohashes3)
     dataset_app1.append(C)
     dataset_app2.append(C)
+
+#   Individu D moving
+    _geohashes4 = [0 for x in range(0, nbstep)]
+
+    for x in range(0, nbstep):
+        _geohashes4[x] = (x,grid[x*sizemap + 5])
+    D=Individu(1, _geohashes4)
+    dataset_app1.append(D)
+    dataset_app2.append(D)
+
+#   Individu E moving
+    _geohashes5 = [0 for x in range(0, nbstep)]
+
+    for x in range(0, nbstep):
+        _geohashes5[x] = (x,grid[x*sizemap + x])
+    E=Individu(1, _geohashes5)
+    dataset_app1.append(E)
+    dataset_app2.append(E)
+    dataset_app1.append(E)
+    dataset_app2.append(E)
+    dataset_app1.append(E)
+    dataset_app2.append(E)
+#   Individu A not moving
+
+    _geohashes6 = [0 for x in range(0, nbstep)]
+    for x in range(0, nbstep):
+        _geohashes6[x] = (x,grid[x*sizemap + 12])
+    G=Individu(1, _geohashes6)
+
+    dataset_app1.append(G)
+    dataset_app2.append(G)
+
+    _geohashes7  = [0 for x in range(0, nbstep)]
+    _geohashes8  = [0 for x in range(0, nbstep)]
+    _geohashes9  = [0 for x in range(0, nbstep)]
+    _geohashes10 = [0 for x in range(0, nbstep)]
+    for x in range(0, nbstep):
+        _geohashes7[x] = (x,grid[2*sizemap + 8])
+        _geohashes8[x] = (x,grid[3*sizemap + 8])
+        _geohashes9[x] = (x,grid[2*sizemap + 9])
+        _geohashes10    [x] = (x,grid[3*sizemap + 9])
+    H=Individu(1, _geohashes7)
+    I=Individu(1, _geohashes8)
+    J=Individu(1, _geohashes9)
+    K=Individu(1, _geohashes10)
+    dataset_app1.append(H)
+    dataset_app2.append(H)
+    dataset_app1.append(I)
+    dataset_app2.append(I)
+    dataset_app1.append(J)
+    dataset_app2.append(J)
+    dataset_app1.append(K)
+    dataset_app2.append(K)
 
     print("the map is")
     for i in range (0,sizemap):
