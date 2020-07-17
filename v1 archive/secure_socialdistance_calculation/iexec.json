@@ -1,0 +1,44 @@
+{
+  "description": "My iExec ressource description, must be at least 150 chars long in order to pass the validation checks. Describe your application, dataset or workerpool to your users",
+  "license": "MIT",
+  "author": "?",
+  "social": {
+    "website": "?",
+    "github": "?"
+  },
+  "logo": "logo.png",
+  "dapps": [
+    {
+      "name": "Recomanded-dapp-for-MyDataset",
+      "addresses": {
+        "42": "0x0000000000000000000000000000000000000000"
+      },
+      "buyConf": {
+        "params": "",
+        "tag": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "trust": "0",
+        "callback": "0x0000000000000000000000000000000000000000"
+      }
+    }
+  ],
+  "dataset": {
+    "owner": "0x7800885445a481315Fac90A8e8BDb62a0e538b71",
+    "name": "tracks_socialdistancecalculation_v1",
+    "multiaddr": "/ipfs/QmPCQVfbt1cSDVxsUAckr9ovxDnMLFjho5wmvYskXPYxjt",
+    "checksum": "0x0000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "buyConf": {
+    "params": "",
+    "tag": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "trust": "0",
+    "callback": "0x0000000000000000000000000000000000000000"
+  },
+  "app": {
+    "owner": "0x7800885445a481315Fac90A8e8BDb62a0e538b71",
+    "name": "app_socialdistance01",
+    "type": "DOCKER",
+    "multiaddr": "registry.hub.docker.com/ericro/app_socialdistancecalculation:0.1",
+    "checksum": "0x783e283aa74323b230ee19d606ec9dadfbd79f09cf3e0a73c46f756c37faa5e4",
+    "mrenclave": "6c72c07c0a8bfb2701f66be91d6ed3fa3438f72db7284e338efb6b1e44b9b59e|fa6e3d1cece5780ea6a43d26b1410cb8|16e7c11e75448e31c94d023e40ece7429fb17481bc62f521c8f70da9c48110a1"
+  }
+}

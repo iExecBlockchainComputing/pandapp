@@ -1,0 +1,43 @@
+{
+  "description": "My iExec ressource description, must be at least 150 chars long in order to pass the validation checks. Describe your application, dataset or workerpool to your users",
+  "license": "MIT",
+  "author": "?",
+  "social": {
+    "website": "?",
+    "github": "?"
+  },
+  "logo": "logo.png",
+  "dapps": [
+    {
+      "name": "Recomanded-dapp-for-MyDataset",
+      "addresses": {
+        "42": "0x0000000000000000000000000000000000000000"
+      },
+      "buyConf": {
+        "params": "",
+        "tag": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "trust": "0",
+        "callback": "0x0000000000000000000000000000000000000000"      }
+    }
+  ],
+  "dataset": {
+    "owner": "0x7800885445a481315Fac90A8e8BDb62a0e538b71",
+    "name": "tracks_heatmap_v1",
+    "multiaddr": "/ipfs/QmbwdzE3J764HjNEqhmsdaTamaBDw9C8FrJCQp2NGGVC7F",
+    "checksum": "0x0000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "buyConf": {
+    "params": "",
+    "tag": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "trust": "0",
+    "callback": "0x0000000000000000000000000000000000000000"
+  },
+  "app": {
+    "owner": "0x7800885445a481315Fac90A8e8BDb62a0e538b71",
+    "name": "app_heatmap03",
+    "type": "DOCKER",
+    "multiaddr": "registry.hub.docker.com/ericro/app_heatmap:0.3",
+      "checksum": "0xa1749dbebbc2f9ffa0a3df04aacf9459d9a8650aa012c99576b14b109d959725",
+    "mrenclave": "4198309883f334aaa3c13136a8f7833e89cbaab0e8600c435b69bafd9898a028|0d019287b75963ec0c6c60670be09d1c|16e7c11e75448e31c94d023e40ece7429fb17481bc62f521c8f70da9c48110a1"
+  }
+}
