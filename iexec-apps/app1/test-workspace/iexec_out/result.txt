@@ -1,2 +1,5 @@
+PROCESSING (export) APP1 results: 
+
 {'UUID': 1.0, 'position': 1.0}
 {'UUID': 3.0, 'position': 3.0}
+{'UUID': 10, 'position': 74}

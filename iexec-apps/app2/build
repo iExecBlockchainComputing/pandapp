@@ -1,4 +1,4 @@
 #!/bin/sh
 # Execute inside appX
 cd $(dirname $0)
-docker image build -t pandapp-app1:0.0.1 .
+docker image build -t pandapp-app2:0.0.1 .

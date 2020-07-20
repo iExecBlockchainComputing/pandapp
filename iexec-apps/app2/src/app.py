@@ -18,14 +18,14 @@ if os.path.exists(iexec_in + '/dataset.txt'):
 connectionStr = 'mongodb://{}@172.17.0.2:27017/?authSource=data'.format(dbCredentials)
 client = MongoClient(connectionStr)
 db=client.data
-infos = db.app1View.find()
+infos = db.app2View.find()
 client.close()
 
 
 
 # Append some results
 with open(iexec_out + '/result.txt', 'w+') as fout:
-    fout.write("PROCESSING (export) APP1 results: \n\n")
+    fout.write("PROCESSING (export) APP2 results: \n\n")
     for row in infos:
         fout.write(str(row)+"\n")
 
