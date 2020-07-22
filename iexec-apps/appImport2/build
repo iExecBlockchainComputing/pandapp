@@ -1,0 +1,4 @@
+#!/bin/sh
+# Execute inside appX
+cd $(dirname $0)
+docker image build -t pandapp-appimport2:0.0.1 .
