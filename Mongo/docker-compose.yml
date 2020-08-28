@@ -2,7 +2,7 @@ mongoSecureDB:
     image: docker.io/iexechub/sconecuratedimages-apps:mongodb-3.4.4-alpine-scone3.0 
     container_name: MongoDBServer
     volumes: 
-        - /home/gregoire/iexec-projects/Pandapp/Mongo/mongodb-data/db:/data/db
+        - /home/usr/iexec-projects/Pandapp/Mongo/mongodb-data/db:/data/db
     entrypoint: "/bin/bash"
     command: -c "mongod --auth"
 
